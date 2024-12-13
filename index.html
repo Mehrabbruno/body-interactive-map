@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interative Body</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+        "imports": {
+            "images": "./assets/images.js"
+        }
+    }
+    </script>
+</head>
+<body>
+  <section class="slider">
+    <div class="svg_box"></div>
+    <h4 class="title">Body Front</h4>
+    <div class="dots">
+      <span class="dot on"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <h4 class="left">Left</h4>
+    <h4 class="right">Right</h4>
+    <img class="left" src="assets/left_arrow.svg" alt="left_arrow">
+    <img class="right" src="assets/right_arrow.svg" alt="right_arrow">
+  </section>
+  <main>
+    <section class="history">
+      <form>
+        <h3 class="title">Personal Info</h3>
+        <div>
+          <input placeholder="First name" required id="firstname" name="firstname" type="text">
+          <input placeholder="Last name" id="lastname" name="lastname" type="text">
+        </div>
+        <input placeholder="Email" id="email" required name="email" type="email">
+        <div class="fixed">
+          <button id="close" type="button">Close</button>
+          <button id="submit" type="submit">Submit</button>
+        </div>
+      </form>
+      
+    </section>
+    <section class="info">
+      <textarea id="desc" placeholder="Enter any further information here" type="text"></textarea>
+      <button id="show_cards">
+        Next
+      </button>
+    </section>
+  </main>
+
+  <!-- Modal Start -->
+   <div id="modal-container">
+    <div class="modal">
+      <div class="icon-wrapper">
+        <img src="assets/check.png" width="70" height="70"/>
+      </div>
+      <div>Thank you! Your form has been submitted</div>
+      <a href="/" class="close-btn">Close</a>
+    </div>
+   </div>
+  <!-- Modal End -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="assets/images.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
