@@ -167,7 +167,7 @@ function get_imgs() {
       </g>
     </g>
     </svg>`,
-    `<svg id="Back front" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 127.43">
+    `<svg id="Right-hand side" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 127.43">
       <defs>
         <style>
           .cls-1 {
@@ -218,7 +218,7 @@ function get_imgs() {
         </g>
       </g>
     </svg>`,
-    `<svg id="Front back" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 127.43">
+    `<svg id="Left-hand side" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 127.43">
       <defs>
         <style>
           .cls-1 {
