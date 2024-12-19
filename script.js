@@ -130,7 +130,7 @@ function onsubmit (e) {
   report.querySelector('#report-email').innerText = email;
   report.querySelector('#report-desc').innerText = desc;
   const reportImages = report.querySelector('#report-images');
-  const labels = ['Body Front', 'Body Back', 'Back front', 'Front back']
+  const labels = ['Body Front', 'Body Back', 'Right-hand side', 'Left-hand side']
   Array.from(reportImages.children).forEach((child, i) => {
     child.innerHTML = svg_box.children[i].outerHTML
     const label = document.createElement('div')
