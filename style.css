@@ -128,12 +128,18 @@ button:hover{
 .slider h4.left{
   position: absolute;
   top: 10vh;
-  right: 30%;
+  right: 35%;
+  font-size: 26px;
+  font-weight: 600;
+  transition: .2s;
 }
 .slider h4.right{
   position: absolute;
   top: 10vh;
-  left: 30%;
+  left: 35%;
+  font-size: 26px;
+  font-weight: 600;
+  transition: .2s;
 }
 .slider h4{
   text-transform: capitalize;
@@ -301,7 +307,16 @@ h1 {
 }
 /* Modain Container End */
 
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
+  .slider h4.left{
+    right: 30%;
+  }
+  .slider h4.right{
+    left: 30%;
+  }
+}
+
+@media (max-width: 900px) {
   .history{
     display: none;
   }
