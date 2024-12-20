@@ -1,6 +1,6 @@
 let svgx, dotx, els = [], count = 0
 const labels = [
-  ['Right', 'Left'], ['Left', 'Right'], ['Body back', 'Body front'], ['Body front', 'Body back']
+  ['Right', 'Left'], ['Left', 'Right'], ['Body <br> back', 'Body <br> front'], ['Body <br> front', 'Body <br> back']
 ]
 //Init
 const input = document.querySelector('textarea')
