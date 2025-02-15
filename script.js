@@ -116,6 +116,13 @@ function click (el) {
 function onsubmit (e) {
   // Fill the report with form data
   e.preventDefault()
+
+  // Check if any element with class 'cls-1' also has the 'on' class
+  if (!document.querySelector('.cls-1.on')) {
+    alert("Please select a body section before submitting the form.");
+    return;
+  }
+
   const firstname = document.getElementById('firstname').value;
   const lastname = document.getElementById('lastname').value;
   const email = document.getElementById('email').value;
