@@ -146,11 +146,31 @@ function onsubmit (e) {
     child.append(label)
   })
   // Generate and download the image
+  
   html2canvas(report).then(function(canvas) {
-    const link = document.createElement('a');
-    link.href = canvas.toDataURL('image/png');
-    link.download = 'medical-report.png';
-    link.click();
+    canvas.toBlob(function(blob) {
+      const formData = new FormData();
+      formData.append('firstname', firstname);
+      formData.append('lastname', lastname);
+      formData.append('email', email);
+      formData.append('desc', desc);
+      formData.append('image', blob, 'medical-report.png');
+
+      fetch("https://phpstack-1311192-4904597.cloudwaysapps.com/send-email",{
+        method: 'POST',
+        body: formData
+      }).then(response => {
+        if(response.ok){
+          alert('Email sent successfully!');
+          window.location.href = 'https://www.sydneypain.com.au/';
+        } else {
+          alert('Error sending email');
+        }
+      }).catch(error => {
+        console.error('Error:', error);
+        alert('Error sending email');
+    });
+  });
   });
 
   document.getElementById("modal-container").style.display = 'flex';
