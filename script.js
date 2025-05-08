@@ -136,6 +136,10 @@ function onsubmit (e) {
   report.querySelector('#report-name').innerText = firstname + ' ' + lastname;
   report.querySelector('#report-email').innerText = email;
   report.querySelector('#report-desc').innerText = desc;
+
+  const today = new Date().toLocaleString();
+  report.querySelector('#report-date').innerText = today;
+  
   const reportImages = report.querySelector('#report-images');
   const labels = ['Body Front', 'Body Back', 'Right-hand side', 'Left-hand side']
   Array.from(reportImages.children).forEach((child, i) => {
@@ -184,8 +188,11 @@ report.innerHTML = `
     <div><strong>Name:</strong> <span id="report-name"></span></div>
     <div><strong>Email:</strong> <span id="report-email"></span></div>
   </div>
-  <div class="description">
-    <strong>Description:</strong> <span id="report-desc"></span>
+  <div class="details">
+    <div><strong>Date:</strong> <span id="report-date"></span></div>
+    <div class="description">
+      <strong>Description:</strong> <span id="report-desc"></span>
+    </div>
   </div>
   <div class="images" id="report-images">
     <div></div><div></div><div></div><div></div>
